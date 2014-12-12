@@ -18,9 +18,9 @@ namespace TaskDemo
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            txtResultJSON.Text = "";
+            //txtResultJSON.Text = "";
             Cursor.Current = Cursors.WaitCursor;
-
+            
             var response = RequestUri(uri);
             var data = ReadResponse(response);
             SetResult(data);
@@ -30,7 +30,7 @@ namespace TaskDemo
 
         private void btnSearchAsync_Click(object sender, EventArgs e)
         {
-            txtResultJSON.Text = "";
+            //txtResultJSON.Text = "";
             Cursor.Current = Cursors.WaitCursor;
 
             RequestUriAsync(uri)
@@ -63,7 +63,7 @@ namespace TaskDemo
         private void SetResult(String data)
         {
             Console.WriteLine(data);
-            txtResultJSON.Text = data;
+            //txtResultJSON.Text = data;
         }
         private void SetFutureResult(Task<String> dataAsync)
         {
@@ -80,7 +80,6 @@ namespace TaskDemo
         {
 
         }
-
         
     }
 }
